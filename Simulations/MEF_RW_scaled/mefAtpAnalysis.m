@@ -101,7 +101,7 @@ for SqueezeCount = 1:numel(Squeeze)
     %%% S = Exp_tab.Properties.VariableNames;
 
     % SUBSET AND SUM THE ATPASE ROWS
-    ATPases = readtable('EnerSysGO kinetic data 15092021 Gene Rules for Phil 25092021.xlsx'); % read in rules
+    ATPases = readtable('EnerSysGO kinetic data.xlsx'); % read in rules
     [gene, kcat, ~, ~] = ATPaseRules(ATPases, dataRaw, dataPC, S{1}); % call simply to get gene list and kcat
     atpaseRows = find(ismember(dataRaw.NEWSymbol,gene));
     atpaseArray = dataPC_compress(atpaseRows,:);
